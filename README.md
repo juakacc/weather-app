@@ -21,6 +21,9 @@ $ cd weather-app
 $ npm i
 ```
 
+Renomeie o arquivo `example.env` para `.env`. Preencha o valor para a sua `API_KEY`, registrado no site: [OpenWeather](https://openweathermap.org/api)
+_Pode utilizar essa para um teste_ **rápido**: _96d424a067dcefe8ebf68c859928548c_
+
 Para executar o projeto localmente é necessário ter um _emulador instalado ou um smartphone configurado_ para debug
 
 ```shell
