@@ -1,6 +1,8 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+
+import styles from './styles';
 
 const ItemInfo = ({title, value, icon}) => {
   return (
@@ -13,24 +15,5 @@ const ItemInfo = ({title, value, icon}) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    backgroundColor: '#ecf0f1',
-    justifyContent: 'space-around',
-    padding: 10,
-    marginVertical: 5,
-  },
-  title: {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  value: {
-    textAlign: 'center',
-    fontSize: 16,
-  },
-});
 
 export default ItemInfo;
