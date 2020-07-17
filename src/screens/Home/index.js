@@ -12,6 +12,7 @@ import Geolocation from 'react-native-geolocation-service';
 import axios from 'axios';
 import moment from 'moment';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import {API_KEY} from 'react-native-dotenv';
 
 import ItemInfo from '../../components/ItemInfo';
 import Header from '../../components/Header';
@@ -68,7 +69,7 @@ function Home() {
     setIsLoaded(false);
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=96d424a067dcefe8ebf68c859928548c&lang=pt_br&units=metric`,
+        `https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid=${API_KEY}&lang=pt_br&units=metric`,
       )
       .then(({data}) => {
         setWeather({

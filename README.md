@@ -21,7 +21,7 @@ $ cd weather-app
 $ npm i
 ```
 
-_Para executar o projeto localmente é necessário ter um emulador instalado ou um smartphone configurado para debug_
+Para executar o projeto localmente é necessário ter um _emulador instalado ou um smartphone configurado_ para debug
 
 ```shell
 # Inicie o servidor
