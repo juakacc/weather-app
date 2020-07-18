@@ -4,6 +4,8 @@ Aplicativo para exibir informações sobre o tempo na região na qual o disposit
 
 Para isso utiliza as coordenadas _(é necessário permissão para acessar a localização do usuário)_, com esses dados é possível fazer uma requisição a [OpenWeather](https://openweathermap.org/api) para recuperar os dados do tempo atual.
 
+[Baixe o .apk e instale (:](https://github.com/juakacc/weather-app/releases/download/v1/install.apk)
+
 ![Home Screen](./docs/screenshot.png)
 
 ## Instalação e configuração
