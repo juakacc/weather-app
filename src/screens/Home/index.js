@@ -12,7 +12,7 @@ import Geolocation from 'react-native-geolocation-service';
 import axios from 'axios';
 import moment from 'moment';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {API_KEY} from 'react-native-dotenv';
+import {API_KEY} from '../../../config';
 
 import ItemInfo from '../../components/ItemInfo';
 import Header from '../../components/Header';
@@ -145,7 +145,7 @@ function Home() {
         </View>
       ) : (
         <View style={styles.spinner}>
-          <ActivityIndicator size="large" color="#2ecc71" />
+          <ActivityIndicator size="large" color="#fff" />
         </View>
       )}
     </SafeAreaView>
