@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
   ActivityIndicator,
+  ScrollView,
 } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import axios from 'axios';
@@ -97,52 +98,54 @@ function Home() {
     <SafeAreaView style={styles.safeArea}>
       <Header />
       {isLoaded ? (
-        <View style={styles.container}>
-          <Text style={styles.title}>Dados climáticos da sua região</Text>
+        <ScrollView>
+          <View style={styles.container}>
+            <Text style={styles.title}>Dados climáticos da sua região</Text>
 
-          <View style={styles.containerTemp}>
-            <Image
-              source={{
-                uri: `https://openweathermap.org/img/wn/${weather.icon}@2x.png`,
-              }}
-              style={styles.img}
-            />
-            <Text style={styles.temp}>{`${weather.temp}ºC`}</Text>
-          </View>
+            <View style={styles.containerTemp}>
+              <Image
+                source={{
+                  uri: `https://openweathermap.org/img/wn/${weather.icon}@2x.png`,
+                }}
+                style={styles.img}
+              />
+              <Text style={styles.temp}>{`${weather.temp}ºC`}</Text>
+            </View>
 
-          <Text style={styles.description}>
-            {weather.description.toUpperCase()}
-          </Text>
-
-          <ItemInfo
-            title="Sensação térmica"
-            value={`${weather.feels_like}ºC`}
-            icon="temperature-high"
-          />
-
-          <ItemInfo
-            title="Umidade do ar"
-            value={`${weather.humidity}%`}
-            icon="tint"
-          />
-
-          <ItemInfo
-            title="Velocidade do vento"
-            value={`${weather.speed_wind} m/s`}
-            icon="wind"
-          />
-
-          <Text style={styles.updateData}>
-            <Icon name="clock" />{' '}
-            {moment.unix(weather.dt).format('DD/MM/YYYY HH:mm')}
-          </Text>
-
-          <TouchableOpacity onPress={updateData} style={styles.btnUpdate}>
-            <Text style={styles.btnText}>
-              <Icon name="redo" color="#fff" size={16} /> Atualizar
+            <Text style={styles.description}>
+              {weather.description.toUpperCase()}
             </Text>
-          </TouchableOpacity>
-        </View>
+
+            <ItemInfo
+              title="Sensação térmica"
+              value={`${weather.feels_like}ºC`}
+              icon="temperature-high"
+            />
+
+            <ItemInfo
+              title="Umidade do ar"
+              value={`${weather.humidity}%`}
+              icon="tint"
+            />
+
+            <ItemInfo
+              title="Velocidade do vento"
+              value={`${weather.speed_wind} m/s`}
+              icon="wind"
+            />
+
+            <Text style={styles.updateData}>
+              <Icon name="clock" />{' '}
+              {moment.unix(weather.dt).format('DD/MM/YYYY HH:mm')}
+            </Text>
+
+            <TouchableOpacity onPress={updateData} style={styles.btnUpdate}>
+              <Text style={styles.btnText}>
+                <Icon name="redo" color="#fff" size={16} /> Atualizar
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       ) : (
         <View style={styles.spinner}>
           <ActivityIndicator size="large" color="#fff" />

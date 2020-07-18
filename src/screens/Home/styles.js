@@ -6,7 +6,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#3498db',
   },
   container: {
+    // flex: 1,
+    flexGrow: 1,
     padding: 15,
+    // backgroundColor: '#3498db',
   },
   containerTemp: {
     flexDirection: 'row',
@@ -29,6 +32,7 @@ const styles = StyleSheet.create({
   },
   btnUpdate: {
     paddingVertical: 15,
+    // marginBottom: 20,
     backgroundColor: '#2ecc71',
     borderRadius: 10,
   },
